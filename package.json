@@ -1,0 +1,43 @@
+{
+  "name": "react-app-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "analyze": "",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "flow-bin": "^0.59.0",
+    "gh-pages": "^1.1.0",
+    "history": "^4.7.2",
+    "jest-enzyme": "^4.0.1",
+    "node-sass-chokidar": "^0.0.3",
+    "prettier": "^1.8.2",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-test-renderer": "^16.1.1",
+    "redux": "^3.7.2",
+    "source-map-explorer": "^1.5.0",
+    "supertest": "^3.0.0"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://127.0.0.1:3000/"
+    }
+  }
+}
