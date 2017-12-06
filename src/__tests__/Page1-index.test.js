@@ -14,9 +14,9 @@ describe('<Page1Index />', () => {
     expect(wrapper.find('li')).toHaveLength(4)
   })
   
-  it('fetch data', async () => {
+  /*it('fetch data', async () => {
     const response = await request('http://127.0.0.1:3000').get('/api/todo/list')
     //console.log(response)
     expect(response.body.success).toBeFalsy()
-  })
+  })*/
 })
