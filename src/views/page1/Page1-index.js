@@ -20,7 +20,7 @@ type State = {
   list: ListItem[]
 }
 
-class Page1Index extends Component<Props, State> {
+export class Page1Index extends Component<Props, State> {
   static contextTypes = {
     store:PropTypes.object
   }
@@ -67,7 +67,7 @@ class Page1Index extends Component<Props, State> {
         <div>
           <ul>
             {list.map((item, index) => {
-              return <li key={index}>{item.name + '  ' + item.money}</li>
+              return <li className="item" key={index}>{item.name + '  ' + item.money}</li>
             })}
           </ul>
           {

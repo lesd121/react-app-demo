@@ -1,17 +1,26 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import request from 'supertest'
-import Page1Index from '../views/page1/Page1-index'
+import {Page1Index} from '../views/page1/Page1-index'
 
 
 describe('<Page1Index />', () => {
+  let wrapper
+  const myAppState = {
+    pageTitle: 'Hello World',
+    records: ['a','b','c','d']
+  }
+  
+  beforeEach(() => {
+    wrapper = shallow(<Page1Index myAppState={myAppState}/>)
+  })
+  
   it('renders widthout crashing', () => {
-    shallow(<Page1Index/>)
+    expect(wrapper.length).toEqual(1)
   })
   
   it('has 4 list item', () => {
-    const wrapper = shallow(<Page1Index/>)
-    expect(wrapper.find('li')).toHaveLength(4)
+    expect(wrapper.find('li.item')).toHaveLength(4)
   })
   
   /*it('fetch data', async () => {
