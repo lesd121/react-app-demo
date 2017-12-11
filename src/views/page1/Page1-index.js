@@ -81,6 +81,8 @@ export class Page1Index extends Component<Props, State> {
         </div>
         <div ref={myDiv => (this.myDiv = myDiv)}></div>
         <button onClick={this.goToPage4}>go to page4</button>
+        <br/>
+        <span>test</span>
       </div>
     )
   }
